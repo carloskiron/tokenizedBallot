@@ -9,7 +9,7 @@ Installation
 ```shell
 yarn install
 ```
-Compile Ballot.sol
+Compile contracts
 ```shell
 yarn hardhat compile
 ```
@@ -17,13 +17,14 @@ Unit tests
 ```shell
 yarn hardhat test
 ```
-Deploy contract on Testnet
+Deploy contracts on Testnet
 ```shell
-yarn hardhat run ./scripts/deploy.ts   
+yarn hardhat run ./scripts/deploy.ts
+yarn hardhat run ./scripts/deployToken.ts   
 ```
-Give right to vote
+Delegate
 ```shell
-yarn hardhat run ./scripts/giveRightToVote.ts   
+yarn hardhat run ./scripts/delegate.ts   
 ```
 Vote a proposal
 ```shell
