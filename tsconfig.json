@@ -6,16 +6,8 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true,
+    "resolveJsonModule": true
   },
-  "include": [
-    "./scripts",
-    "./test",
-    "./util",
-    "./typechain",
-    "./typechain-types"
-  ],
-  "files": [
-    "./hardhat.config.ts"
-  ],
+  "include": ["./scripts", "./test", "./util", "./typechain-types"],
+  "files": ["./hardhat.config.ts"]
 }

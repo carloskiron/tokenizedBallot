@@ -44,9 +44,6 @@ contract TokenizedBallot {
         tokenizedContract = ITokenizedContract(_tokenContract);
     }
 
-    /// Delegate your vote to the voter `to`.
-    function delegate(address to) external {}
-
     function votePower(address account) public view returns (uint256 votePower_) {
         votePower_ =
             tokenizedContract.getPastVotes(account, referenceBlock) -
