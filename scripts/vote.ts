@@ -8,8 +8,8 @@ import {
   TokenizedBallot__factory,
 } from "../typechain-types";
 
-const my_chosen_proposal = 2;
-const amountToVote = ethers.utils.parseEther("2");
+const myChosenProposal = 2;
+const amountToVote = ethers.utils.parseEther("1");
 
 async function main() {
   //Getting my account
@@ -27,16 +27,16 @@ async function main() {
   )) as MyERC20Votes__factory;
 
   //Delegate for myself first
-  let tx = await MyERC20VotesFactory.connect(signer)
-    .attach(constants.MyERC20Address)
-    .delegate(signer.address);
-  await tx.wait();
+  // let tx = await MyERC20VotesFactory.connect(signer)
+  //   .attach(constants.MyERC20Address)
+  //   .delegate(signer.address);
+  // await tx.wait();
 
   //Then Vote on proposal I've chosen
-  tx = await tokenizedBallotFactory
+  let tx = await tokenizedBallotFactory
     .connect(signer)
     .attach(constants.tokenizedBallotAddress)
-    .vote(my_chosen_proposal, amountToVote);
+    .vote(myChosenProposal, amountToVote);
   await tx.wait();
 }
 
