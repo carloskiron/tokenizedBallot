@@ -15,7 +15,7 @@ import { convertStringArrayToBytes32 } from "./convertStringArrayToBytes32";
 async function main() {
   //Getting my account
   const signer = new ethers.Wallet(
-    process.env.MY_PRIVATE_KEY!,
+    process.env.PRIVATE_KEY!,
     constants.provider
   );
 
